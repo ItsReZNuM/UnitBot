@@ -19,9 +19,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TOKEN = '7962365735:AAEwwWkyOJ5hyOW4toExtZwesceLrRJyXx0'
+TOKEN = 'YOUR_BOT_TOKEN'
 bot = telebot.TeleBot(TOKEN)
-ADMIN_USER_IDS = [6728527154]
+ADMIN_USER_IDS = [123456789]
 message_tracker = {}
 user_data = {}
 USERS_FILE = "users.json"
