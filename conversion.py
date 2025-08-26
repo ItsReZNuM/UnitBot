@@ -1,4 +1,3 @@
-# conversion.py
 
 import re
 import math
@@ -6,7 +5,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# دیکشنری بزرگ UNITS بدون تغییر در اینجا قرار می‌گیرد
 UNITS = {
     'length': {
         'names': {

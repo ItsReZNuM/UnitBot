@@ -1,4 +1,3 @@
-# handlers.py
 
 import logging
 from time import sleep
@@ -64,7 +63,69 @@ For a full guide, use /help 📚"""
             return
         
         help_message = """📚 *راهنمای UnitBot* 📚
-... (متن کامل راهنما بدون تغییر اینجا قرار می‌گیرد) ...
+
+🔧 *نحوه استفاده*:
+توی هر چت بنویسید `@RezUnitBot <عدد> <واحد>` تا مقدار به همه واحدها در دسته مربوطه تبدیل بشه. مثال: 
+`@RezUnitBot 10 km`
+ یا 
+ `@RezUnitBot 10 kilometer`.
+
+✨ *ویژگی‌ها*:
+- پشتیبانی از نام کامل واحدها (مثل `kilometer`) و مخفف‌ها (مثل `km`).
+- حساس نبودن به حروف بزرگ و کوچک (مثل `KM`, `km`, `KiLoMeTeR`).
+- پشتیبانی از اعداد فارسی (مثل ۱۰ یا ۵.۵).
+- اعداد بزرگ با کاما جدا می‌شن (مثل 10,000)، اعداد کوچک تا ۶ رقم اعشار برای مقادیر خیلی کوچک و ۲ رقم اعشار برای بقیه (مثل 0.000006 یا 6.21).
+
+📏 *واحدهای پشتیبانی‌شده*:
+- *طول* 📏: millimeter (mm), centimeter (cm), meter (m), kilometer (km), decimeter (dm), inch (in), foot (ft), yard (yd), mile (mi)
+- *وزن* ⚖️: milligram (mg), gram (g), kilogram (kg), ton (t), pound (lb)
+- *مساحت* 🏞️: centimeter square (cm2), meter square (m2), hectare (ha), inch square (in2), foot square (ft2), acre
+- *حجم* 🧴: milliliter (ml), centimeter cubic (cm3), cc (cc), liter (l), meter cubic (m3), gallon (gal), barrel (bbl)
+- *زمان* ⏱️: second (s), minute (min), hour (h), day (d), week (wk), month (mo), year (yr)
+- *دما* 🌡️: celsius (C), fahrenheit (F), kelvin (K)
+- *سرعت* 🚀: meter per second (m/s), kilometer per hour (km/h), mile per hour (mph), mach
+- *انرژی* ⚡️: joule (J), kilojoule (kJ), megajoule (MJ), watt hour (Wh), kilowatt hour (kWh), calorie (cal), kilocalorie (kcal)
+- *فشار* 🌬️: pascal (Pa), kilopascal (kPa), atmosphere (atm), bar, millimeter mercury (mmHg)
+- *زاویه* 📐: degree (deg), radian (rad), gradian (grad)
+- *دیتا* 💾: byte (B), kilobyte (KB), megabyte (MB), gigabyte (GB), terabyte (TB), petabyte (PB), exabyte (EB)
+
+📝 *مثال‌ها*:
+- `@RezUnitBot 10 km` → تبدیل ۱۰ کیلومتر به همه واحدهای طول.
+- `@RezUnitBot 5 kg` → تبدیل ۵ کیلوگرم به همه واحدهای وزن.
+- `@RezUnitBot 100 C` → تبدیل ۱۰۰ سلسیوس به فارنهایت و کلوین.
+
+🚀 *حالا با `@RezUnitBot 10 km` شروع کنید! تبدیل لذت‌بخش!* 🎉
+
+📚 *UnitBot Help Guide* 📚
+
+🔧 *How to Use*:
+Type `@RezUnitBot <number> <unit>` in any chat to convert a value to all units in its category. Example: `@RezUnitBot 10 km` or `@RezUnitBot 10 kilometer`.
+
+✨ *Features*:
+- Supports both full unit names (e.g., `kilometer`) and abbreviations (e.g., `km`).
+- Case-insensitive (e.g., `KM`, `km`, `KiLoMeTeR` all work).
+- Persian numbers (e.g., ۱۰ or ۵.۵) are supported.
+- Large numbers are formatted with commas (e.g., 10,000), small numbers up to 6 decimal places for very small values or 2 decimal places otherwise (e.g., 0.000006 or 6.21).
+
+📏 *Supported Units*:
+- *Length* 📏: millimeter (mm), centimeter (cm), meter (m), kilometer (km), decimeter (dm), inch (in), foot (ft), yard (yd), mile (mi)
+- *Weight* ⚖️: milligram (mg), gram (g), kilogram (kg), ton (t), pound (lb)
+- *Area* 🏞️: centimeter square (cm2), meter square (m2), hectare (ha), inch square (in2), foot square (ft2), acre
+- *Volume* 🧴: milliliter (ml), centimeter cubic (cm3), cc (cc), liter (l), meter cubic (m3), gallon (gal), barrel (bbl)
+- *Time* ⏱️: second (s), minute (min), hour (h), day (d), week (wk), month (mo), year (yr)
+- *Temperature* 🌡️: celsius (C), fahrenheit (F), kelvin (K)
+- *Speed* 🚀: meter per second (m/s), kilometer per hour (km/h), mile per hour (mph), mach
+- *Energy* ⚡️: joule (J), kilojoule (kJ), megajoule (MJ), watt hour (Wh), kilowatt hour (kWh), calorie (cal), kilocalorie (kcal)
+- *Pressure* 🌬️: pascal (Pa), kilopascal (kPa), atmosphere (atm), bar, millimeter mercury (mmHg)
+- *Angle* 📐: degree (deg), radian (rad), gradian (grad)
+- *Digital* 💾: byte (B), kilobyte (KB), megabyte (MB), gigabyte (GB), terabyte (TB), petabyte (PB), exabyte (EB)
+
+📝 *Examples*:
+- `@RezUnitBot 10 km` → Converts 10 kilometers to all length units.
+- `@RezUnitBot 5 kg` → Converts 5 kilograms to all weight units.
+- `@RezUnitBot 100 C` → Converts 100 Celsius to Fahrenheit and Kelvin.
+
+🚀 *Start converting now with `@RezUnitBot 10 km`! Happy converting!* 🎉.
 """
         bot.reply_to(message, help_message, parse_mode="Markdown")
 
@@ -163,5 +224,3 @@ For a full guide, use /help 📚"""
         if not allowed:
             bot.send_message(user_id, error_message)
             return
-        # این هندلر برای جلوگیری از پاسخ به پیام‌های متنی عادی است
-        # می‌توانید منطق دیگری در اینجا اضافه کنید اگر نیاز بود

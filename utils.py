@@ -1,5 +1,3 @@
-# utils.py
-
 from time import time
 import logging
 
@@ -8,7 +6,6 @@ logger = logging.getLogger(__name__)
 message_tracker = {}
 
 def is_message_valid(message, bot_start_time):
-    """بررسی می‌کند که آیا پیام قدیمی است یا خیر."""
     message_time = message.date
     if message_time < bot_start_time:
         logger.warning(f"Ignoring old message from user {message.chat.id} sent at {message_time}")
@@ -16,7 +13,6 @@ def is_message_valid(message, bot_start_time):
     return True
 
 def check_rate_limit(user_id):
-    """نرخ ارسال پیام کاربر را کنترل می‌کند."""
     current_time = time()
     
     if user_id not in message_tracker:
